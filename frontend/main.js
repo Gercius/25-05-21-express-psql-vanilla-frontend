@@ -79,10 +79,11 @@ function handleUserSwitching(users) {
 }
 
 // user pridejimas
-const addUserForm = document.querySelector(".new-user-from");
+const addUserForm = document.querySelector(".new-user-form");
 addUserForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
     const formData = new FormData(addUserForm);
-    // todo - figure out how this magic shit works
+    // todo - figure out how this Object.fromEntries magic shit works
     const data = Object.fromEntries(formData.entries());
     try {
         const response = await fetch(API_URI, {
@@ -100,6 +101,7 @@ addUserForm.addEventListener("submit", async (e) => {
         const result = await response.json();
         console.log("Server response:", result);
         await new Promise((resolve) => setTimeout(resolve, 1000));
+        location.reload();
     } catch (err) {
         console.error(err.message);
     }
