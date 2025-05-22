@@ -1,0 +1,16 @@
+### Get users
+GET http://localhost:3000/api/users
+
+### Create user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Tomas",
+    "surname": "Tomaitis",
+    "birth_date": "1994-12-31"
+}
+
+### Delete user
+DELETE http://localhost:3000/api/users/8
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="forms">
+        <form class="show-user-form">
+            <label for="name">Vardas:</label>
+            <input type="text" id="name" name="name" />
+
+            <label for="surname">Pavardė:</label>
+            <input type="text" id="surname" name="surname" />
+
+            <label for="birth_date">Gimimo data:</label>
+            <input type="text" id="birth_date" name="birth_date" />
+
+            <div class="btn-wrapper">
+                <button class="prev-btn" disabled>Praeitas</button>
+                <button class="next-btn">Kitas</button>
+            </div>
+        </form>
+
+        <form class="new-user-from">
+            <label for="name">Vardas:</label>
+            <input type="text" id="name" name="name" required placeholder="Vardas" />
+
+            <label for="surname">Pavardė:</label>
+            <input type="text" id="surname" name="surname" required placeholder="Pavardė" />
+
+            <label for="birth_date">Gimimo data:</label>
+            <input type="date" id="birth_date" name="birth_date" required />
+
+            <button class="add-btn" type="submit">Pridėti</button>
+        </form>
+    </section>
+
+    <section class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vardas</th>
+                    <th>Pavarde</th>
+                    <th>Gimimo Data</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </section>
+</body>
+
+</html>

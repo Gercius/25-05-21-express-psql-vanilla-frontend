@@ -1,0 +1,94 @@
+:root {
+    color-scheme: dark;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.table-wrapper {
+    margin-top: 2rem;
+}
+
+table {
+    font-size: 1.25rem;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #616161;
+}
+
+tr:nth-child(even) {
+    background-color: #333333;
+}
+
+tr:hover {
+    background-color: #420000;
+}
+
+.forms {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 4rem;
+}
+
+form {
+    display: inline-block;
+    font-size: 1.25rem;
+    max-width: fit-content;
+    margin: 2rem auto;
+
+    label {
+        display: block;
+        margin-top: 0.75rem;
+    }
+
+    input {
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 0.25rem;
+    }
+
+    .btn-wrapper {
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        margin-top: 1rem;
+        display: block;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.25rem;
+        width: 100px;
+        height: 35px;
+    }
+
+    button:not(:disabled):hover {
+        background-color: black;
+    }
+
+    .add-btn {
+        margin-inline: auto;
+    }
+}
