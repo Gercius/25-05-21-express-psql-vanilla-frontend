@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import path from "node:path";
 import { db, initializeDatabase } from "./database.js";
 
 const app = express();
@@ -7,6 +8,8 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, "../frontend")));
 
 // gauna users
 app.get("/api/users", async (req, res) => {

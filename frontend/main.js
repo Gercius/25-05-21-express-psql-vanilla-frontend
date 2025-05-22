@@ -1,3 +1,5 @@
+const API_URI = "https://two5-05-21-express-psql-vanilla-frontend.onrender.com/api/users";
+
 (async function main() {
     const users = await getData();
     populateTableData(users);
@@ -6,9 +8,8 @@
 
 // user data gavimas
 async function getData() {
-    const url = "http://localhost:3000/api/users";
     try {
-        const response = await fetch(url);
+        const response = await fetch(API_URI);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -84,7 +85,7 @@ addUserForm.addEventListener("submit", async (e) => {
     // todo - figure out how this magic shit works
     const data = Object.fromEntries(formData.entries());
     try {
-        const response = await fetch("http://localhost:3000/api/users", {
+        const response = await fetch(API_URI, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
